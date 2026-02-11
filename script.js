@@ -27,15 +27,21 @@ function initGame() {
         clearInterval(timerInterval);
     }
     
-    // Create card pairs
-    cards = [...symbols, ...symbols]
-        .sort(() => Math.random() - 0.5)
-        .map((symbol, index) => ({
-            id: index,
-            symbol: symbol,
-            flipped: false,
-            matched: false
-        }));
+    // Create card pairs and shuffle using Fisher-Yates algorithm
+    const cardSymbols = [...symbols, ...symbols];
+    
+    // Fisher-Yates shuffle
+    for (let i = cardSymbols.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cardSymbols[i], cardSymbols[j]] = [cardSymbols[j], cardSymbols[i]];
+    }
+    
+    cards = cardSymbols.map((symbol, index) => ({
+        id: index,
+        symbol: symbol,
+        flipped: false,
+        matched: false
+    }));
     
     // Render game board
     renderBoard();
