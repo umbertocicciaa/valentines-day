@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day! ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Happy Valentine's Day! ❤️</h1>
+            <p class="love-message">For my amazing girlfriend</p>
+        </div>
+
+        <div class="game-info">
+            <div class="info-item">
+                <span class="label">Moves:</span>
+                <span class="value" id="moves">0</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Time:</span>
+                <span class="value" id="timer">0:00</span>
+            </div>
+        </div>
+
+        <div class="game-board" id="gameBoard"></div>
+
+        <div class="controls">
+            <button class="btn" id="restartBtn">New Game</button>
+        </div>
+
+        <div class="victory-modal" id="victoryModal">
+            <div class="modal-content">
+                <h2>🎉 You Won! 🎉</h2>
+                <p class="victory-message">You matched all the hearts!</p>
+                <p class="stats">
+                    <strong>Moves:</strong> <span id="finalMoves"></span><br>
+                    <strong>Time:</strong> <span id="finalTime"></span>
+                </p>
+                <p class="love-note">You're amazing! I love you! ❤️</p>
+                <button class="btn" id="playAgainBtn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
