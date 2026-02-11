@@ -1,4 +1,4 @@
-# San Valentine ❤️
+# Valentine's Day ❤️
 
 A romantic Valentine's Day memory card game for my amazing girlfriend!
 
